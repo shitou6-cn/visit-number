@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="zh-CN" http-equiv="Content-Language">
+    <title>SuperSlide - 查看参数</title>
+    <script src="jquery1.42.min.js" type="text/javascript"></script>
+    <link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="paramPage" id="content">
+    <ul class="notice">
+        <li class="all on">
+            特惠权益
+        </li>
+        <li class="need">
+            流量包
+        </li>
+    </ul>
+    <br>
+    <br>
+    <table border="0" cellpadding="0" cellspacing="0" class="param">
+        <tr  class="n">
+            <td class="t">
+                1
+            </td>
+            <td class="t">
+                1
+            </td>
+        </tr>
+        <tr  class="n">
+            <td class="t">
+                2
+            </td>
+            <td class="t">
+                2
+            </td>
+        </tr>
+        <tr  class="n">
+            <td class="t">
+                3
+            </td>
+            <td class="t">
+                3
+            </td>
+        </tr>
+        <tr class="n">
+            <td class="t">
+                4
+            </td>
+            <td class="t">
+                4
+            </td>
+        </tr>
+        <tr  class="n">
+            <td class="t">
+                5
+            </td>
+            <td class="t">
+                5
+            </td>
+        </tr>
+
+
+        <tr class="imp">
+            <td class="t">
+                test2
+            </td>
+            <td class="t">
+                1
+            </td>
+        </tr>
+
+        <tr class="imp">
+            <td class="t">
+                test2
+            </td>
+            <td class="t">
+                2
+            </td>
+        </tr>
+
+        <tr class="imp">
+            <td class="t">
+                test2
+            </td>
+            <td class="t">
+                3
+            </td>
+        </tr>
+        <tr class="imp">
+            <td class="t">
+                test2
+            </td>
+            <td class="t">
+                4
+            </td>
+        </tr>
+        <tr class="imp">
+            <td class="t">
+                test2
+            </td>
+            <td class="t">
+                5
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+<script type="text/javascript">
+
+    $(".param tr").hover(function () {
+        $(".param tr:not('.imp')").hide(300);
+        $(".param tr:not('.n')").show(300);
+        $(this).addClass("on")
+
+    }, function () {
+        $(".param tr:not('.imp')").hide(300);
+        $(".param tr:not('.n')").show(300);
+        $(this).removeClass("on")
+
+    });
+    $(".notice .need").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+        $(".param tr:not('.imp')").show(300);
+        $(".param tr:not('.n')").hide(300);
+    });
+    $(".notice .all").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+        $(".param tr:not('.imp')").hide(300);
+        $(".param tr:not('.n')").show(300);
+    });
+
+</script>
+
+
+</html>
+<!--<script type="text/javascript">-->
+<!--    //百度统计代码-->
+<!--    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");-->
+<!--    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa630f96b6a9dd549675d26373853f7f1' type='text/javascript'%3E%3C/script%3E"));-->
+<!--</script>-->
